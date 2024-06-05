@@ -1,0 +1,52 @@
+## Docker commands used to build the application 
+# TODO: insert the docker build command
+docker build -t techtrends .
+
+## Docker commands used to run the application
+# TODO: insert the docker run command
+docker run -d -p 7111:3111 techtrends
+
+## Docker commands used to get the application logs
+# TODO: insert the docker logs command
+docker logs 5b740cb46fe2b10d69794c0338f26b3936ad5bd76cdb35c1437a07569e2fd791
+
+## Logs from the container running the TechTrends application
+# TODO: paste logs from the Docker container 
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production 
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off 
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:172.17.0.1 - - [03/Jun/2024 14:47:40] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [03/Jun/2024 14:47:40] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:172.17.0.1 - - [03/Jun/2024 14:47:40] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:app:An existing article is retrieved 2020 CNCF Annual Report
+INFO:werkzeug:172.17.0.1 - - [03/Jun/2024 14:52:35] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [03/Jun/2024 14:52:35] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:An existing article is retrieved CNCF Cloud Native Definition v1.0
+INFO:werkzeug:172.17.0.1 - - [03/Jun/2024 14:52:48] "GET /5 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [03/Jun/2024 14:52:48] "GET /static/css/main.css HTTP/1.1" 304 -
+ERROR:app:A non-existing article is accessed and a 404 page is returned
+INFO:werkzeug:172.17.0.1 - - [03/Jun/2024 14:53:06] "GET /9 HTTP/1.1" 404 -
+INFO:werkzeug:172.17.0.1 - - [03/Jun/2024 14:53:06] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:The "About Us" page is retrieved.
+INFO:werkzeug:172.17.0.1 - - [03/Jun/2024 14:55:23] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [03/Jun/2024 14:55:23] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:172.17.0.1 - - [03/Jun/2024 14:55:31] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [03/Jun/2024 14:55:31] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:A new article is created. Title is "1st news"
+INFO:werkzeug:172.17.0.1 - - [03/Jun/2024 14:55:47] "POST /create HTTP/1.1" 302 -
+INFO:werkzeug:172.17.0.1 - - [03/Jun/2024 14:55:47] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [03/Jun/2024 14:55:47] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:172.17.0.1 - - [03/Jun/2024 14:55:59] "GET /healthz HTTP/1.1" 404 -
+INFO:werkzeug:172.17.0.1 - - [03/Jun/2024 14:56:13] "GET /health HTTP/1.1" 404 -
+INFO:werkzeug:172.17.0.1 - - [03/Jun/2024 14:56:26] "GET /health HTTP/1.1" 404 -
+INFO:app:Status request successfull
+INFO:werkzeug:172.17.0.1 - - [03/Jun/2024 14:56:42] "GET /status HTTP/1.1" 200 -
+INFO:app:Metrics request successfull
+INFO:werkzeug:172.17.0.1 - - [03/Jun/2024 14:57:00] "GET /metrics HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [03/Jun/2024 14:57:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [03/Jun/2024 14:57:12] "GET /static/css/main.css HTTP/1.1" 304 -
